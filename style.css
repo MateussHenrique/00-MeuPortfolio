@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* cabeçalho e navegação */
+.header {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #00ff41;
+}
+
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00ff41;
+}
+
+/* conteudo principal */
+.main-content {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* textos na esquerda */
+.left-column {
+    flex: 1;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: 3.5rem;
+    color: #00ff41;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #00ff41;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* textos na direita */
+.right-column {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-decoration {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ff41;
+    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+}
+
+.portrait-container {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.portrait {
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(45deg, #333, #666);
+    border: 3px solid #00ff41;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+}
+
+.portrait::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><rect width="300" height="400" fill="%23333"/><circle cx="150" cy="120" r="40" fill="%23666"/><rect x="100" y="180" width="100" height="60" fill="%23666"/><rect x="120" y="260" width="60" height="100" fill="%23666"/></svg>');
+    background-size: cover;
+}
+
+/* linha verde vertical */
+.vertical-line {
+    position: absolute;
+    right: 20%;
+    top: 10%;
+    width: 4px;
+    height: 60%;
+    background-color: #00ff41;
+}
+
+/* pontos de progresso */
+.progress-dots {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ff41;
+    border-radius: 50%;
+}
+
+.dot.filled {
+    background-color: #00ff41;
+}
+
+/* padrão dos quadrado */
+.square-pattern {
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.pattern-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff41;
+}
+
+/* código binário */
+.binary-code {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+
